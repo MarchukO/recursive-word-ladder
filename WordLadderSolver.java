@@ -19,12 +19,10 @@ public class WordLadderSolver {
             return new ArrayList<String>();
         }
 
-        startWord = startWord.trim().toUpperCase();
-        endWord = endWord.trim().toUpperCase();
-
+        startWord = startWord.trim().toLowerCase();
+        endWord = endWord.trim().toLowerCase();
         ArrayList<String> candidates = dictionary.getWordsOfLength(startWord.length());
         boolean found = search(startWord, endWord, candidates);
-
         if (found) {
             return new ArrayList<String>(ladder);
         }
