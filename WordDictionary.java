@@ -15,7 +15,7 @@ public class WordDictionary {
         String line;
 
         while ((line = reader.readLine()) != null) {
-            String word = line.trim().toUpperCase();
+            String word = line.trim().toLowerCase();
 
             if (!word.isEmpty() && !wordLookup.contains(word)) {
                 words.add(word);
@@ -29,7 +29,7 @@ public class WordDictionary {
         if (word == null) {
             return false;
         }
-        return wordLookup.contains(word.trim().toUpperCase());
+        return wordLookup.contains(word.trim().toLowerCase());
     }
     public ArrayList<String> getWordsOfLength(int length) {
         ArrayList<String> matchingWords =new ArrayList<String>();
