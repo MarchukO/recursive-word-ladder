@@ -11,8 +11,7 @@ public class WordLadderApp {
         try {
             dictionary = new WordDictionary("words_small.txt");
         } catch (IOException exception) {
-            System.out.println(
-                    "Error: Unable to open words_small.txt.");
+            System.out.println("Error: Unable to open words_small.txt.");
             keyboard.close();
             return;
         }
@@ -33,20 +32,17 @@ public class WordLadderApp {
             return;
         }
         if (startWord.length() != endWord.length()) {
-            System.out.println(
-                    "The starting and ending words must have the same length.");
+            System.out.println("The starting and ending words must have the same length.");
             keyboard.close();
             return;
         }
         if (!dictionary.contains(startWord)) {
-            System.out.println(
-                    "The starting word does not exist in the dictionary.");
+            System.out.println("The starting word does not exist in the dictionary.");
             keyboard.close();
             return;
         }
         if (!dictionary.contains(endWord)) {
-            System.out.println(
-                    "The ending word does not exist in the dictionary.");
+            System.out.println("The ending word does not exist in the dictionary.");
             keyboard.close();
             return;
         }
